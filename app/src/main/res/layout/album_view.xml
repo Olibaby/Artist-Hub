@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tvAlbumTitle"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/title"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumTitleValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvAlbumTitleValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:ellipsize="end"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumTitle" />
+
+    <TextView
+        android:id="@+id/tvAlbumStatus"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/status"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumStatusValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumTitle" />
+
+    <TextView
+        android:id="@+id/tvAlbumStatusValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:text="TextView"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumStatus"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumStatus"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumStatus" />
+
+    <TextView
+        android:id="@+id/tvAlbumDate"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/date"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumDateValue"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumStatus" />
+
+    <TextView
+        android:id="@+id/tvAlbumDateValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:text="TextView"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumDate"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumDate" />
+
+    <TextView
+        android:id="@+id/tvAlbumCountry"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/country"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumCountryValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumDate" />
+
+    <TextView
+        android:id="@+id/tvAlbumCountryValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:text="TextView"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumCountry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumCountry"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumCountry" />
+
+    <TextView
+        android:id="@+id/tvAlbumDis"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/disambiguation"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumDisValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumCountry" />
+
+    <TextView
+        android:id="@+id/tvAlbumDisValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumDis"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumDis"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumDis" />
+
+    <TextView
+        android:id="@+id/tvAlbumScore"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/score"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumScoreValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumDis" />
+
+    <TextView
+        android:id="@+id/tvAlbumScoreValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumScore"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumScore"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumScore" />
+
+    <TextView
+        android:id="@+id/tvAlbumTracks"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/tracks"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumTracksValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumScore" />
+
+    <TextView
+        android:id="@+id/tvAlbumTracksValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumTracks"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumTracks"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumTracks" />
+
+    <TextView
+        android:id="@+id/tvAlbumBarcode"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size_two"
+        android:text="@string/barcode"
+        app:layout_constraintEnd_toStartOf="@+id/tvAlbumBarcodeValue"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumTracks" />
+
+    <TextView
+        android:id="@+id/tvAlbumBarcodeValue"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="0dp"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="2dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/tvAlbumBarcode"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/tvAlbumBarcode"
+        app:layout_constraintTop_toTopOf="@+id/tvAlbumBarcode" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_view"
+        android:layout_marginTop="@dimen/margin_size"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvAlbumBarcode" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

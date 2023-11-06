@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SearchView android:id="@+id/searchView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_size"
+    android:layout_marginTop="@dimen/margin_size"
+    android:layout_marginBottom="@dimen/margin_size"
+    android:background="@color/search_bg"
+    android:elevation="1dp"
+    android:queryHint="Search..."
+    xmlns:android="http://schemas.android.com/apk/res/android" />

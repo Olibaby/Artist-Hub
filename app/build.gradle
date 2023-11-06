@@ -1,0 +1,92 @@
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id "org.jetbrains.kotlin.kapt" version "1.6.21"
+    id "androidx.navigation.safeargs.kotlin"
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.artisthub"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        buildConfigField "String", "MUSICBRAINZ_API_BASE_URL", "\"http://musicbrainz.org/ws/2/\""
+        buildConfigField "String", "USER_AGENT_CONTACT_INFO", "\"https://github.com/Olibaby\""
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    kotlinOptions {
+        jvmTarget = '11'
+    }
+}
+
+dependencies {
+    def lifecycle_version = "2.5.0-beta01"
+    def nav_version_ktx = "2.5.0-alpha01"
+
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+    testImplementation 'org.mockito:mockito-core:4.6.1'
+    testImplementation 'org.mockito.kotlin:mockito-kotlin:4.0.0'
+    testImplementation 'io.mockk:mockk:1.12.4'
+    androidTestImplementation "androidx.arch.core:core-testing:2.1.0"
+    testImplementation "android.arch.core:core-testing:1.0.0"
+    testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:1.2.1"
+
+    implementation 'androidx.multidex:multidex:2.0.1'      //MultiDex
+    implementation 'com.jakewharton.timber:timber:4.7.1'   //Timber
+    implementation "io.insert-koin:koin-android:3.1.6"     // Koin Android
+    implementation "io.insert-koin:koin-core:3.1.6"
+
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.5.2'         // Coroutines
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.5.2'      // Coroutines
+    implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'      // Retrofit-Coroutines
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'  //LoadingDialog
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'   //Circular Image-View
+    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'  //ripple loading view
+    implementation 'com.squareup.retrofit2:retrofit:2.6.1'          /*Retrofit lib*/
+    implementation 'com.squareup.retrofit2:converter-gson:2.6.1'    /*Retrofit-Gson*/
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.9.1'  //logging interceptor
+    implementation 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'    //Retrofit-rxjava lib
+
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"     /*Lifecycle only*/
+    kapt "android.arch.lifecycle:compiler:1.1.1"             /*lifecycle-annotation-processor*/
+    //implementation 'androidx.lifecycle:lifecycle-common-java8:2.5.0' /*alternative to annotation processor - java8*/
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"      /*lifecycle-viewmodel*/
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_version"       /*lifecycle-livedata*/
+
+    // For Kotlin
+    implementation "androidx.navigation:navigation-fragment-ktx:$nav_version_ktx"
+    implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
+
+    implementation 'com.github.d-max:spots-dialog:1.1@aar'  //LoadingDialog
+    implementation 'com.mikhaellopez:circularimageview:3.2.0'   //Circular Image-View
+    implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'  //ripple loading view
+
+}

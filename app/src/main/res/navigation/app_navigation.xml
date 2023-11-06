@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/mySearchArtistFragment">
+
+    <fragment
+        android:id="@+id/mySearchArtistFragment"
+        android:name="com.example.artisthub.features.searchartist.presentation.fragment.SearchArtistFragment"
+        android:label="fragment_my_search_artist"
+        tools:layout="@layout/fragment_search_artist">
+
+        <action android:id="@+id/action_mySearchArtistFragment_to_myArtistDetailFragment"
+            app:destination="@id/myArtistDetailFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+
+
+    <fragment android:id="@+id/myArtistDetailFragment"
+        android:name="com.example.artisthub.features.artistdetail.presentation.fragment.ArtistDetailFragment"
+        android:label="fragment_my_artist_detail"
+        tools:layout="@layout/fragment_artist_detail">
+
+        <argument
+            android:name="selected_artist"
+            app:argType="com.example.artisthub.features.searchartist.data.model.response.Artist" />
+
+        <action android:id="@+id/action_myArtistDetailFragment_to_mySearchArtistFragment"
+            app:popUpTo="@id/mySearchArtistFragment"/>
+    </fragment>
+
+</navigation>

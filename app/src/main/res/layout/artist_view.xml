@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/background">
+
+    <TextView
+        android:id="@+id/tvArtistName"
+        style="@style/sfpro20semibold"
+        android:layout_width="0dp"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginEnd="@dimen/margin_size_three"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_size"
+        android:text="@string/artist_name_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.04"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvType"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size"
+        android:text="@string/type"
+        app:layout_constraintEnd_toStartOf="@+id/tvTypeDet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvArtistName" />
+
+    <TextView
+        android:id="@+id/tvTypeDet"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/type_detail"
+        app:layout_constraintStart_toEndOf="@+id/tvType"
+        app:layout_constraintTop_toTopOf="@id/tvType" />
+
+    <TextView
+        android:id="@+id/tvCountry"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size"
+        android:text="@string/country"
+        app:layout_constraintEnd_toStartOf="@+id/tvCountryDet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvType" />
+
+    <TextView
+        android:id="@+id/tvCountryDet"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/country_detail"
+        app:layout_constraintBottom_toBottomOf="@+id/tvCountry"
+        app:layout_constraintStart_toEndOf="@+id/tvCountry"
+        app:layout_constraintTop_toTopOf="@+id/tvCountry" />
+
+    <TextView
+        android:id="@+id/tvScore"
+        style="@style/fieldsTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/margin_size_two"
+        android:layout_marginTop="@dimen/margin_size"
+        android:text="@string/score"
+        app:layout_constraintEnd_toStartOf="@+id/tvScoreDet"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvCountry" />
+
+    <TextView
+        android:id="@+id/tvScoreDet"
+        style="@style/fieldsDetTextStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/score_detail"
+        app:layout_constraintBottom_toBottomOf="@+id/tvScore"
+        app:layout_constraintStart_toEndOf="@+id/tvScore"
+        app:layout_constraintTop_toTopOf="@+id/tvScore" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/line_view"
+        android:layout_marginTop="@dimen/margin_size"
+        android:background="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvScore" />
+</androidx.constraintlayout.widget.ConstraintLayout>
