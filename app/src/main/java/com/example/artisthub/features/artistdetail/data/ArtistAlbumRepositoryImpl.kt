@@ -7,8 +7,8 @@ import com.example.artisthub.features.artistdetail.data.model.album.GetAlbumsQue
 import com.example.artisthub.features.artistdetail.data.model.album.response.GetAlbumsResponse
 import com.example.artisthub.features.artistdetail.repository.ArtistAlbumRepository
 
-class ArtistAlbumRepositoryImpl(private val artisAlbumAPI: ArtistAlbumAPI, private val artistAlbumNetworkCall: NetworkCall): ArtistAlbumRepository {
+class ArtistAlbumRepositoryImpl(private val artistAlbumAPI: ArtistAlbumAPI, private val artistAlbumNetworkCall: NetworkCall): ArtistAlbumRepository {
     override suspend fun getAlbums(query: GetAlbumsQuery): NetworkResult<GetAlbumsResponse> {
-        return artistAlbumNetworkCall.makeNetworkCall(query.album,artisAlbumAPI::getAlbums) { it.error == null }
+        return artistAlbumNetworkCall.makeNetworkCall(query.album,artistAlbumAPI::getAlbums) { it.error == null }
     }
 }
