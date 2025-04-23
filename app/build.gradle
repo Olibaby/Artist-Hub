@@ -68,7 +68,6 @@ dependencies {
     implementation 'com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2'      // Retrofit-Coroutines
 
     implementation 'com.github.d-max:spots-dialog:1.1@aar'  //LoadingDialog
-    implementation 'com.mikhaellopez:circularimageview:3.2.0'   //Circular Image-View
     implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'  //ripple loading view
     implementation 'com.squareup.retrofit2:retrofit:2.6.1'          /*Retrofit lib*/
     implementation 'com.squareup.retrofit2:converter-gson:2.6.1'    /*Retrofit-Gson*/
@@ -86,7 +85,6 @@ dependencies {
     implementation "androidx.navigation:navigation-ui-ktx:$nav_version_ktx"
 
     implementation 'com.github.d-max:spots-dialog:1.1@aar'  //LoadingDialog
-    implementation 'com.mikhaellopez:circularimageview:3.2.0'   //Circular Image-View
     implementation 'com.gauravbhola.ripplepulsebackground:library:1.0.0'  //ripple loading view
 
 }
